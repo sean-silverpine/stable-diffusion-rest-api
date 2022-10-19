@@ -14,7 +14,7 @@ import utilities
 
 
 CONFIG_FILE = "configs/stable-diffusion/v1-inference.yaml"
-DEVICE = "mps"
+DEVICE = "cuda"
 LOG_PREFIX = "Sampling"
 
 

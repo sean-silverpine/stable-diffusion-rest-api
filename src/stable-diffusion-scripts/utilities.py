@@ -9,7 +9,7 @@ def load_model(file, config):
     model = ldm.util.instantiate_from_config(config.model)
     sd = torch.load(file, map_location="cpu")["state_dict"]
     model.load_state_dict(sd, strict=False)
-    model.to("mps")
+    model.to(torch.device("cuda"))
     model.eval()
     return model
 
